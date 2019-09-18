@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             agent {
-                docker {
+                sudo docker {
                     image 'python:2-alpine' 
                 }
             }
