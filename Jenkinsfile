@@ -5,6 +5,7 @@ pipeline {
             agent {
                 docker {
                     image 'python:2-alpine' 
+                    args '-u root:sudo -v $HOME/workspace/myproject:/myproject'
                 }
             }
             steps {
